@@ -1,0 +1,38 @@
+.header-title, .header-menu, .header-close {
+	line-height: 1.8rem;
+}
+
+.header-title {
+	font-size: 1.64rem;
+	margin-right: 1.64rem;
+}
+
+.header-menu a {
+	text-decoration: none;
+	color: white;
+	font-size: 1rem;
+	margin-right: 1.5rem;
+	padding-bottom: 2rem;
+}
+.header-menu a.selected {
+	border-bottom: 3px solid #fc9417;
+}
+.header-menu a:hover {
+	border-bottom: 3px solid #bc6f12;
+}
+
+.header-close {
+	margin-top: -1rem;
+	font-size: 2.57rem;
+	cursor: default;
+}
+@media (max-width: 768px) {
+	.header-menu a {
+		padding-bottom: 0;
+	}
+	.header-close {
+		order: -1;
+		text-align: right;
+		margin-top: -20px;
+	}
+}

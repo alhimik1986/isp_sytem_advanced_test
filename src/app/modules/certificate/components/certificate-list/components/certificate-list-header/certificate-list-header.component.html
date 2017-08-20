@@ -1,0 +1,17 @@
+<div class="nav">
+	<div class="nav-item header-title">Заказ SSL-сертификата</div>
+	<nav class="nav-item">
+		<ul class="nav header-menu">
+			<li class="nav-item"><a [routerLink]="['/certificate/list', '']"         [routerLinkActive]="['selected']" [routerLinkActiveOptions]="{exact:true}">Все</a></li>
+			<li class="nav-item"><a [routerLink]="['/certificate/list', 'popular']"  [routerLinkActive]="['selected']">Популярные</a></li>
+			<li class="nav-item"><a [routerLink]="['/certificate/list', 'comodo']"   [routerLinkActive]="['selected']">Comodo</a></li>
+			<li class="nav-item"><a [routerLink]="['/certificate/list', 'geotrust']" [routerLinkActive]="['selected']">GeoTrust</a></li>
+			<li class="nav-item"><a [routerLink]="['/certificate/list', 'rapidssl']" [routerLinkActive]="['selected']">RapidSSL</a></li>
+			<li class="nav-item"><a [routerLink]="['/certificate/list', 'thawte']"   [routerLinkActive]="['selected']">Thawte</a></li>
+			<li class="nav-item"><a [routerLink]="['/certificate/list', 'symantec']" [routerLinkActive]="['selected']">Symantec</a></li>
+		</ul>
+	</nav>
+	<div class="nav-item header-close ml-auto">
+		<span>&times;</span>
+	</div>
+</div>

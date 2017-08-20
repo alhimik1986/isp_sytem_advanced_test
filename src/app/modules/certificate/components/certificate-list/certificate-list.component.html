@@ -1,0 +1,16 @@
+<div appFixedHeaderAndSidebars>
+	<div class="certificate-header header-background js-certificate-header">
+		<app-certificate-list-header></app-certificate-list-header>
+	</div>
+	<div class="nav flex-nowrap certificate-body body-background">
+		<div class="nav-item sidebar-1 js-sidebar-1">
+			<app-certificate-list-filter [siteInfo]="siteInfo" [siteInfoEvent]="siteInfoEvent"></app-certificate-list-filter>
+		</div>
+		<div class="nav-item sidebar-2">
+			<app-certificate-list-content [priceList]="priceList"></app-certificate-list-content>
+		</div>
+		<div class="nav-item sidebar-3 js-sidebar-3">
+			<app-certificate-list-articles></app-certificate-list-articles>
+		</div>
+	</div>
+</div>

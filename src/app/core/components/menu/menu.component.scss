@@ -1,0 +1,24 @@
+@media (max-width: 991px) {
+	.navbar-toggler {
+		cursor: pointer;
+	}
+
+	.navbar-collapse {
+		overflow-y: hidden;
+		-webkit-transition: max-height 0.3s ease-in-out;
+		-moz-transition: max-height 0.3s ease-in-out;
+		-o-transition: max-height 0.3s ease-in-out;
+		transition: max-height 0.3s ease-in-out;
+		overflow-y: hidden;
+		max-height: 0;
+		display: flex;
+	}
+
+	.navbar-collapse.show {
+		max-height: 100px;
+	}
+
+	.ml-auto {
+		margin-left: 0 !important;
+	}
+}

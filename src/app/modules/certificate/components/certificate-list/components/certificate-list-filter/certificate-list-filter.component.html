@@ -1,0 +1,37 @@
+<div class="search-filter">
+	<div class="filter-title">
+		Тип проверки
+	</div>
+	<div>
+		<div><label><input type="checkbox" [checked]="hasFilter('D')" (change)="switchType('D')"> Проверка домена</label></div>
+		<div><label><input type="checkbox" [checked]="hasFilter('D+O')" (change)="switchType('D+O')"> Проверка компании</label></div>
+		<div><label><input type="checkbox" [checked]="hasFilter('EV')" (change)="switchType('EV')"> Расширенная (EV)</label></div>
+	</div>
+
+	<br>
+
+	<div class="filter-title">
+		Число доменов
+	</div>
+	<div>
+		<div><label><input type="checkbox" [checked]="hasFilter('WC')" (change)="switchDomain('WC')"> Поддомены</label></div>
+		<div><label><input type="checkbox" [checked]="hasFilter('MD')" (change)="switchDomain('MD')"> Несколько доменов</label></div>
+	</div>
+
+	<br>
+
+	<div class="filter-title">
+		Применение
+	</div>
+	<div>
+		<div><label><input type="checkbox" (change)="switchApplying('')"> Физическим лицам</label></div>
+		<div><label><input type="checkbox" (change)="switchApplying('')"> Интернет-магазинам</label></div>
+		<div><label><input type="checkbox" (change)="switchApplying('')"> Для сайта компании</label></div>
+		<div><label><input type="checkbox" (change)="switchApplying('')"> Гос. учереждениям</label></div>
+		<div><label><input type="checkbox" (change)="switchApplying('')"> Для работы с финансами</label></div>
+		<div><label><input type="checkbox" (change)="switchApplying('')"> Разработчикам ПО</label></div>
+		<div><label><input type="checkbox" (change)="switchApplying('')"> Для электронной почты</label></div>
+	</div>
+
+	<a href="#" class="link-dashed clear-filter-link" (click)="clearFilter()" onclick="return false">очистить фильтр</a>
+</div>

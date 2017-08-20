@@ -1,0 +1,98 @@
+<div id="wrapper" class="container">
+	<div class="header">
+		<hr class="line white">
+		<hr class="line">
+		
+		<div class="header-margin">
+			<div class="row justify-content-between align-items-center">
+				<div class="col">
+					<a href="" class="d-flex text-decoration-none">
+						<div class="border-right-blue text-center logo-block">
+							<img src="/assets/images/logo.png" alt="FirstSSL | удобный выбор и покупка SSL">
+						</div>
+						<div class="logo-text-padding">
+							<div class="logo-title">
+								<span class="logo-title-blue">First</span><span class="logo-title-orange">SSL</span>
+							</div>
+							<div class="logo-desc">
+								удобный выбор и покупка SSL
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="col">
+					<div class="phone">
+						<div class="phone-number">8 800 775 38 37</div>
+						<div class="phone-desc">бесплатно, круглосуточно</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="user-menu">
+						<div class="d-flex flex-row align-items-center user-menu-justify">
+							<div class="user-notification">
+								<img src="/assets/images/sprites/bell.png" alt="">
+							</div>
+							<div>
+								<div class="d-flex flex-row">
+									<div class="user-name">
+										a.sorokin@ispsystem.ru
+									</div>
+									<div>
+										<div class="caret down" style="background-image: url(/assets/images/sprites/bottom.png); background-repeat: no-repeat; width: 7px; height: 5px; margin-top: 0.5rem;"></div>
+									</div>
+								</div>
+								<div class="account" style="font-family: Arial;">
+									4705 &#x584;
+								</div>
+							</div>
+							<div>
+								<img src="/assets/images/avatar.png" alt="" class="user-avatar">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr class="line">
+
+		<div class="header-menu-margin">
+			<div class="nav">
+				<nav class="nav-item">
+					<ul class="nav header-menu">
+						<li class="nav-item"><a routerLink="/" [routerLinkActive]="['selected']" [routerLinkActiveOptions]="{exact:true}">Главное</a></li>
+						<li class="nav-item"><a routerLink="/certificate/list" [routerLinkActive]="['selected']">SSL-сертификаты</a></li>
+						<li class="nav-item"><a href="#" onclick="return false;">Партнерство</a></li>
+						<li class="nav-item"><a href="#" onclick="return false;">Финансы и документы</a></li>
+					</ul>
+				</nav>
+				<nav class="nav-item header-menu-pull-right">
+					<ul class="header-menu header-menu-right nav">
+						<li class="nav-item">
+							<a href="#" onclick="return false;">
+								<i class="header-menu-icon" style="background-image: url(/assets/images/sprites/book.png)"></i>
+								База знаний
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" onclick="return false;">
+								<i class="header-menu-icon" style="background-image: url(/assets/images/sprites/lifebuoy.png)"></i>
+								Служба поддержки
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<hr class="line">
+		<hr class="line">
+		<hr class="line">
+	</div>
+
+	<div class="main main-margin main-block-background">
+		<router-outlet></router-outlet>
+	</div>
+</div>

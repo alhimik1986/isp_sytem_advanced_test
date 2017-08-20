@@ -1,0 +1,56 @@
+.company-logo {
+	padding-bottom: 0.4rem;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.company-title {
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+}
+
+.company-desc {
+	margin-bottom: 1rem;
+}
+
+.company-btn-group {
+	margin-bottom: 1rem;
+}
+.company-btn-group button {
+	color: inherit;
+	border-color: #d8d8d8;
+	cursor: pointer;
+}
+/*.company-btn-group button:hover {
+	color: inherit;
+	background-color: #f0f0f0;
+	border-color: #d8d8d8;
+}*/
+.company-btn-group button.selected {
+	color: inherit;
+	background-color: #fde4a4;
+	border-color: #d8d8d8;
+}
+
+.btn-buy-now, .btn-buy-now:hover {
+	color: white;
+	border-color: #fc9417;
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+}
+.btn-buy-now {
+	background-color: #fc9417;
+	cursor: pointer;
+	margin-bottom: 1rem;
+}
+.btn-buy-now:hover {
+	background-color: #ea8915;
+}
+
+.add-to-cart {
+	margin-left: 1rem;
+	padding-top: 0.5rem;
+	display: inline-block;
+}

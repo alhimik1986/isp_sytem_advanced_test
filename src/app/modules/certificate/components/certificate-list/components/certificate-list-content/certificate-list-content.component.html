@@ -1,0 +1,28 @@
+<div *ngFor="let item of priceList">
+	<div *ngIf="item.templateInfo.logoUrl" class="company-logo">
+		<img [src]="item.templateInfo.logoUrl" [alt]="item.name">
+	</div>
+
+	<div class="company">
+		<div class="company-title">{{ item.name }}</div>
+		<div class="btn-group company-btn-group">
+			<ng-container *ngFor=" let buttonLabel of item.templateInfo.buttonLabels">
+				<button
+					type="button"
+					class="btn btn-outline-light"
+					(click)="selectPeriod(item.id, buttonLabel.length)"
+					[ngClass]="{selected: buttonLabel.length === item.templateInfo.selectedPeriod}"
+				>
+					{{ buttonLabel.label }}
+					<ng-container *ngIf="item.price.currency === 'EUR'">&euro;</ng-container>
+					<ng-container *ngIf="item.price.currency === 'RUB'">&#x584;</ng-container>
+					<ng-container *ngIf="item.price.currency !== 'EUR' && item.price.currency !== 'RUB'">{{ item.price.currency }}</ng-container>
+				</button>
+			</ng-container>
+		</div>
+		<div class="company-desc" [sanitizeHtml]="item.description_ru"></div>
+
+		<button type="button" class="btn btn-warning btn-buy-now" (click)="buyNow(item.id, item.templateInfo.selectedPeriod)">Купить сейчас</button>
+		<a class="add-to-cart link-dashed" [routerLink]="['/certificate/basket', item.id, item.templateInfo.selectedPeriod]">в корзину</a>
+	</div>
+</div>

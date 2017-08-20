@@ -1,0 +1,44 @@
+@media (max-width: 768px) {
+	.row, .nav {
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+	.row .col, .nav-items {
+		margin-left: 0;
+		width: 100%;
+		flex-basis: auto;
+	}
+}
+
+html {
+	font-size: 14px;
+}
+body {
+	font-family: Verdana, Arial, sans-serif;
+}
+html, body, #wrapper {
+	min-width: 100%;
+	padding: 0;
+	background-color: #f2f2f2;
+}
+
+
+hr.line {
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+hr.white { border-bottom: 1px solid #fff; }
+
+
+a.link-dashed {
+	border-bottom: 1px dashed #3794de;
+	text-decoration: none;
+	line-height: 1.2rem;
+}
+
+
+/* Тире в описании ssl-сертификата (в прайс-листе) */
+.company-desc li:before {
+	content: "- ";
+}
