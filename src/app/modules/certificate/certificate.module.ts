@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
+import { /*HttpModule,*/ JsonpModule } from '@angular/http';
 
 //import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -22,7 +22,8 @@ import { FixedHeaderAndSidebarsDirective } from './directives/fixed-header-and-s
   imports: [
     CommonModule,
     BrowserModule,
-    HttpModule,
+    //HttpModule,
+    JsonpModule,
     //FormsModule,
     //ReactiveFormsModule,
     

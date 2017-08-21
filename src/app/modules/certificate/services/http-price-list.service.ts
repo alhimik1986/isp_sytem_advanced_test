@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response/*, RequestOptions*/ } from '@angular/http';
+import { Jsonp, Response/*, RequestOptions*/ } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
@@ -10,7 +10,7 @@ import 'rxjs/add/observable/throw';
 
 export class HttpPriceListService {
 
-	constructor(private http: Http) {}
+	constructor(private jsonp: Jsonp) {}
 
 	private handleResponse(res: Response): any {
 		let body = res.json() || null;
@@ -81,14 +81,16 @@ export class HttpPriceListService {
 	}
 
 	private httpGet(url: string): Observable<any> {
-		return this.http
+		return this.jsonp
 			 .get(url, {})
 			 .map(this.handleResponse.bind(this))
 			 .catch(this.handleError);
 	}
 
 	public getPriceList() {
-		return this.httpGet('https://my.ispsystem.com/?func=pricelist.export&out=bjson&project=1&itemtype=certificate&onlyavailable=yes');
+		let url = 'https://my.ispsystem.com/?func=pricelist.export&out=bjson&project=1&itemtype=certificate&onlyavailable=yes';
+		url = url + '&callback=__ng_jsonp__.__req0.finished';
+		return this.httpGet(url);
 	}
 
 	// Вспомогательный метод: фильтрация (поиск) в прайс-листе
