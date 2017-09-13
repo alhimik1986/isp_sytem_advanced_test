@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-//import { MenuComponent } from './core/components/menu/menu.component';
+import { MenuComponent } from './core/components/menu/menu.component';
 import { NotFoundComponent } from './core/components/not-found/not-found.component';
 import { MainComponent } from './core/components/main/main.component';
 
@@ -16,7 +16,7 @@ import { FirstSslMainModule } from './modules/first-ssl-main/first-ssl-main.modu
   declarations: [
     AppComponent,
     NotFoundComponent,
-    //MenuComponent,
+    MenuComponent,
     MainComponent
   ],
   imports: [

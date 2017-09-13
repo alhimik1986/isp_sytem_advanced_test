@@ -15,7 +15,7 @@ export class CertificateListComponent implements OnInit, OnDestroy, AfterContent
 	directive = null; // Директива, которую нужно применить после рендеринга этого компонента
 
 	brand: string;
-	private siteInfo: string[] = [];
+	public siteInfo: string[] = [];
 	private priceListOrig = null; 
 	priceList; // Прайс-лист ssl-сертификатов (после фильтрации поиском)
 
