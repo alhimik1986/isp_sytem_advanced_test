@@ -89,7 +89,7 @@ export class HttpPriceListService {
 
 	public getPriceList() {
 		let url = 'https://my.ispsystem.com/?func=pricelist.export&out=bjson&project=1&itemtype=certificate&onlyavailable=yes';
-		url = url + '&callback=__ng_jsonp__.__req0.finished';
+		url += '&callback=JSONP_CALLBACK';
 		return this.httpGet(url);
 	}
 
